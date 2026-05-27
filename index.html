@@ -12,13 +12,11 @@
       href="https://fonts.googleapis.com/css2?family=Scheherazade+New:wght@400;700&family=Amiri:ital,wght@0,400;0,700;1,400&family=Cinzel:wght@400;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style.css">
   </head>
   <body>
     <canvas id="bgCanvas"></canvas>
     <div id="goldDust"></div>
-
-    <!-- HUD -->
     <div class="hud">
       <div class="scene-dots" id="sceneDots"></div>
       <div class="progress-wrap">
@@ -26,8 +24,6 @@
       </div>
       <div class="scene-label" id="sceneLabel"></div>
     </div>
-
-    <!-- NAV -->
     <nav class="nav-controls">
       <button
         class="nav-btn"
@@ -46,8 +42,6 @@
         &#8250;
       </button>
     </nav>
-
-    <!-- TOP CONTROLS -->
     <div class="top-bar">
       <button class="ctrl-btn" id="skipBtn" onclick="skipToEid()">
         تخطي ↓
@@ -57,7 +51,7 @@
       </button>
     </div>
 
-    <!-- ======= SCENE 1: TAWAF ======= -->
+    <!-- SCENE 1: TAWAF -->
     <section class="scene active" id="scene1" data-scene="0">
       <canvas class="scene-canvas" id="tawafCanvas"></canvas>
       <div class="scene-overlay"></div>
@@ -69,7 +63,7 @@
       </div>
     </section>
 
-    <!-- ======= SCENE 2: ARAFAT ======= -->
+    <!-- SCENE 2: ARAFAT -->
     <section class="scene" id="scene2" data-scene="1">
       <canvas class="scene-canvas" id="arafatCanvas"></canvas>
       <div class="scene-overlay"></div>
@@ -81,12 +75,26 @@
       </div>
     </section>
 
-    <!-- ======= SCENE 3: JAMARAT ======= -->
+    <!-- SCENE 3: MUZDALIFAH -->
     <section class="scene" id="scene3" data-scene="2">
-      <canvas class="scene-canvas" id="jamaratCanvas"></canvas>
+      <canvas class="scene-canvas" id="muzdalifaCanvas"></canvas>
       <div class="scene-overlay"></div>
       <div class="scene-content">
         <div class="scene-num">٣</div>
+        <h2 class="scene-title">المبيت في مزدلفة</h2>
+        <p class="scene-sub">
+          يبيت الحجاج في مزدلفة ويجمعون الحصى لرمي الجمرات
+        </p>
+        <div class="calligraphy">سُبْحَانَ اللَّهِ وَبِحَمْدِهِ</div>
+      </div>
+    </section>
+
+    <!-- SCENE 4: JAMARAT -->
+    <section class="scene" id="scene4" data-scene="3">
+      <canvas class="scene-canvas" id="jamaratCanvas"></canvas>
+      <div class="scene-overlay"></div>
+      <div class="scene-content">
+        <div class="scene-num">٤</div>
         <h2 class="scene-title">رمي الجمرات</h2>
         <p class="scene-sub">
           يرمي الحجاج الجمرات رمزاً لرجم الشيطان اقتداءً بإبراهيم عليه السلام
@@ -95,8 +103,8 @@
       </div>
     </section>
 
-    <!-- ======= SCENE 4: EID ======= -->
-    <section class="scene" id="scene4" data-scene="3">
+    <!-- SCENE 5: EID -->
+    <section class="scene" id="scene5" data-scene="4">
       <canvas class="scene-canvas" id="eidCanvas"></canvas>
       <div class="scene-overlay eid-overlay"></div>
       <div class="scene-content eid-content">
