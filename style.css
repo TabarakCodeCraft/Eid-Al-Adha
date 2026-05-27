@@ -8,16 +8,13 @@
     --white: #ffffff;
 }
 
-*,
-*::before,
-*::after {
+*, *::before, *::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-html,
-body {
+html, body {
     width: 100%;
     height: 100%;
     overflow: hidden;
@@ -170,22 +167,11 @@ body {
     }
 }
 
-.scene-num {
-    font-family: "Scheherazade New", serif;
-    font-size: clamp(0.75rem, 2vw, 1rem);
-    color: var(--gold);
-    letter-spacing: 6px;
-    opacity: 0.6;
-    margin-bottom: 6px;
-}
-
 .scene-title {
     font-family: "Scheherazade New", serif;
     font-size: clamp(1.6rem, 5.5vw, 3.8rem);
     color: var(--gold-light);
-    text-shadow:
-        0 0 50px rgba(245, 200, 66, 0.7),
-        0 2px 20px rgba(0, 0, 0, 0.9);
+    text-shadow: 0 0 50px rgba(245, 200, 66, .7), 0 2px 20px rgba(0, 0, 0, .9);
     font-weight: 700;
     line-height: 1.2;
     margin-bottom: 10px;
@@ -194,34 +180,31 @@ body {
 .scene-sub {
     font-family: "Amiri", serif;
     font-size: clamp(0.85rem, 2.5vw, 1.3rem);
-    color: rgba(255, 255, 220, 0.85);
+    color: rgba(255, 255, 220, .85);
     margin-bottom: 14px;
-    text-shadow: 0 1px 8px rgba(0, 0, 0, 0.9);
+    text-shadow: 0 1px 8px rgba(0, 0, 0, .9);
 }
 
 .calligraphy {
     font-family: "Scheherazade New", serif;
     font-size: clamp(1rem, 3vw, 1.9rem);
     color: var(--gold);
-    opacity: 0.92;
+    opacity: .92;
     letter-spacing: 2px;
     animation: calliPulse 3s ease-in-out infinite;
 }
 
 @keyframes calliPulse {
-
-    0%,
-    100% {
-        text-shadow: 0 0 20px rgba(245, 200, 66, 0.4);
+    0%, 100% {
+        text-shadow: 0 0 20px rgba(245, 200, 66, .4);
     }
 
     50% {
-        text-shadow:
-            0 0 50px rgba(245, 200, 66, 0.95),
-            0 0 90px rgba(245, 200, 66, 0.3);
+        text-shadow: 0 0 50px rgba(245, 200, 66, .95), 0 0 90px rgba(245, 200, 66, .3);
     }
 }
 
+/* ============ EID CONTENT ============ */
 .eid-content {
     position: absolute;
     top: 50%;
@@ -244,62 +227,36 @@ body {
     }
 }
 
-.eid-badge {
-    display: inline-block;
-    font-family: "Scheherazade New", serif;
-    font-size: clamp(0.9rem, 2.5vw, 1.2rem);
-    color: var(--deep-green);
-    background: linear-gradient(135deg, var(--gold-light), var(--gold));
-    padding: 5px 24px;
-    border-radius: 30px;
-    margin-bottom: 14px;
-    box-shadow: 0 4px 30px rgba(245, 200, 66, 0.5);
-    animation: badgePulse 2.5s ease-in-out infinite;
-}
-
-@keyframes badgePulse {
-
-    0%,
-    100% {
-        box-shadow: 0 4px 30px rgba(245, 200, 66, 0.5);
-    }
-
-    50% {
-        box-shadow:
-            0 4px 60px rgba(245, 200, 66, 0.95),
-            0 0 120px rgba(245, 200, 66, 0.2);
-    }
-}
-
 .eid-title-ar {
     font-family: "Scheherazade New", serif;
     font-size: clamp(2rem, 8vw, 5.5rem);
     font-weight: 700;
     color: var(--gold-light);
-    text-shadow:
-        0 0 40px rgba(245, 200, 66, 0.9),
-        0 0 100px rgba(245, 200, 66, 0.3),
-        0 4px 20px rgba(0, 0, 0, 0.9);
+    text-shadow: 0 0 40px rgba(245, 200, 66, .9), 0 0 100px rgba(245, 200, 66, .3), 0 4px 20px rgba(0, 0, 0, .9);
     line-height: 1.1;
     margin-bottom: 12px;
-    animation: titleGlow 3s ease-in-out infinite;
+    animation: titleGlow 3s ease-in-out infinite, titleDrop 1.2s 0.5s both;
+}
+
+@keyframes titleDrop {
+    from {
+        opacity: 0;
+        transform: translateY(-30px) scale(1.1);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
 }
 
 @keyframes titleGlow {
-
-    0%,
-    100% {
-        text-shadow:
-            0 0 40px rgba(245, 200, 66, 0.9),
-            0 0 100px rgba(245, 200, 66, 0.3),
-            0 4px 20px rgba(0, 0, 0, 0.9);
+    0%, 100% {
+        text-shadow: 0 0 40px rgba(245, 200, 66, .9), 0 0 100px rgba(245, 200, 66, .3), 0 4px 20px rgba(0, 0, 0, .9);
     }
 
     50% {
-        text-shadow:
-            0 0 70px rgba(245, 200, 66, 1),
-            0 0 160px rgba(245, 200, 66, 0.5),
-            0 4px 20px rgba(0, 0, 0, 0.9);
+        text-shadow: 0 0 70px rgba(245, 200, 66, 1), 0 0 160px rgba(245, 200, 66, .5), 0 4px 20px rgba(0, 0, 0, .9);
     }
 }
 
@@ -316,35 +273,195 @@ body {
 .div-line {
     width: clamp(40px, 8vw, 80px);
     height: 1px;
-    background: linear-gradient(90deg,
-            transparent,
-            var(--gold),
-            transparent);
+    background: linear-gradient(90deg, transparent, var(--gold), transparent);
 }
 
 .eid-title-en {
     font-family: "Cinzel", serif;
     font-size: clamp(1rem, 3.5vw, 2.2rem);
-    color: rgba(255, 250, 220, 0.9);
-    text-shadow: 0 2px 15px rgba(0, 0, 0, 0.8);
+    color: rgba(255, 250, 220, .9);
     margin-bottom: 14px;
-    letter-spacing: 0.04em;
+    letter-spacing: .04em;
+    animation: fadeSlide 1.4s 1s both;
 }
 
 .eid-sub-ar {
     font-family: "Scheherazade New", serif;
     font-size: clamp(0.95rem, 2.5vw, 1.5rem);
-    color: rgba(245, 200, 66, 0.85);
-    margin-bottom: 6px;
+    color: rgba(245, 200, 66, .85);
+    animation: fadeSlide 1.4s 1.3s both;
 }
 
-.eid-sub-en {
-    font-family: "Amiri", serif;
-    font-style: italic;
-    font-size: clamp(0.8rem, 2vw, 1.1rem);
-    color: rgba(255, 255, 220, 0.6);
+@keyframes fadeSlide {
+    from {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
+/* ============ EID GREETING ANIMATION ============ */
+.eid-greeting-wrap {
+    margin-top: 22px;
+    position: relative;
+    animation: greetReveal 1.8s 1.8s both;
+}
+
+@keyframes greetReveal {
+    from {
+        opacity: 0;
+        transform: scale(0.8) translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+.greeting-stars {
+    display: flex;
+    justify-content: center;
+    gap: clamp(8px, 2vw, 18px);
+    margin-bottom: 10px;
+}
+
+.gstar {
+    color: var(--gold);
+    font-size: clamp(0.8rem, 1.8vw, 1.1rem);
+    opacity: 0;
+    animation: starPop 0.5s ease forwards, starFloat 3s ease-in-out infinite;
+}
+
+.gstar.s1 {
+    animation-delay: 2s, 2.5s;
+}
+
+.gstar.s2 {
+    animation-delay: 2.15s, 2.65s;
+}
+
+.gstar.s3 {
+    animation-delay: 2.3s, 2.8s;
+}
+
+.gstar.s4 {
+    animation-delay: 2.45s, 2.95s;
+    font-size: clamp(1rem, 2.2vw, 1.3rem);
+    color: #fff;
+}
+
+.gstar.s5 {
+    animation-delay: 2.6s, 3.1s;
+}
+
+.gstar.s6 {
+    animation-delay: 2.75s, 3.25s;
+}
+
+@keyframes starPop {
+    0% {
+        opacity: 0;
+        transform: scale(0) rotate(-45deg);
+    }
+
+    60% {
+        transform: scale(1.4) rotate(10deg);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1) rotate(0deg);
+    }
+}
+
+@keyframes starFloat {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-5px);
+    }
+}
+
+.greeting-lines {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.gl {
+    font-family: "Scheherazade New", serif;
+    color: rgba(255, 248, 200, .92);
+    opacity: 0;
+    transform: translateX(30px);
+    text-shadow: 0 0 20px rgba(245, 200, 66, .5);
+    animation: glideIn 0.9s cubic-bezier(.16, 1, .3, 1) forwards;
+}
+
+.gl1 {
+    font-size: clamp(1rem, 2.8vw, 1.7rem);
+    font-weight: 700;
+    animation-delay: 2.2s;
+}
+
+.gl2 {
+    font-size: clamp(0.78rem, 1.9vw, 1.15rem);
+    color: rgba(255, 240, 180, .8);
+    animation-delay: 2.6s;
+}
+
+.gl3 {
+    font-size: clamp(0.85rem, 2.2vw, 1.3rem);
+    color: var(--gold);
+    animation-delay: 3s;
+}
+
+@keyframes glideIn {
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.greeting-ornament {
+    margin-top: 10px;
+    opacity: 0;
+    animation: fadeSlide 1s 3.4s both;
+}
+
+/* Pulsing gold border around eid content */
+.eid-content::before {
+    content: '';
+    position: absolute;
+    inset: -20px;
+    border: 1px solid rgba(245, 200, 66, .15);
+    border-radius: 20px;
+    animation: borderGlow 4s ease-in-out infinite;
+    pointer-events: none;
+}
+
+@keyframes borderGlow {
+    0%, 100% {
+        box-shadow: 0 0 20px rgba(245, 200, 66, .1) inset;
+    }
+
+    50% {
+        box-shadow: 0 0 60px rgba(245, 200, 66, .25) inset;
+    }
+}
+
+/* ============ HUD ============ */
 .hud {
     position: fixed;
     bottom: 0;
@@ -369,9 +486,9 @@ body {
     width: 9px;
     height: 9px;
     border-radius: 50%;
-    border: 2px solid rgba(245, 200, 66, 0.4);
+    border: 2px solid rgba(245, 200, 66, .4);
     cursor: pointer;
-    transition: all 0.4s;
+    transition: all .4s;
     background: transparent;
 }
 
@@ -385,29 +502,28 @@ body {
 .progress-wrap {
     width: min(380px, calc(100% - 40px));
     height: 4px;
-    background: rgba(255, 255, 255, 0.08);
+    background: rgba(255, 255, 255, .08);
     border-radius: 999px;
     overflow: hidden;
 }
 
 .progress-bar {
     height: 100%;
-    background: linear-gradient(90deg,
-            rgba(245, 200, 66, 0.9),
-            rgba(255, 255, 255, 0.9));
+    background: linear-gradient(90deg, rgba(245, 200, 66, .9), rgba(255, 255, 255, .9));
     border-radius: 999px;
-    transition: width 0.9s ease;
+    transition: width .9s ease;
     width: 0%;
 }
 
 .scene-label {
     font-family: "Amiri", serif;
-    font-size: clamp(0.75rem, 0.5rem + 1.5vw, 0.95rem);
-    color: rgba(255, 255, 220, 0.85);
-    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    letter-spacing: 0.05em;
+    font-size: clamp(.75rem, .5rem + 1.5vw, .95rem);
+    color: rgba(255, 255, 220, .85);
+    text-shadow: 0 0 10px rgba(0, 0, 0, .5);
+    letter-spacing: .05em;
 }
 
+/* ============ NAV ============ */
 .nav-controls {
     position: fixed;
     top: 50%;
@@ -426,12 +542,12 @@ body {
     width: clamp(38px, 8vw, 52px);
     height: clamp(38px, 8vw, 52px);
     border-radius: 50%;
-    border: 2px solid rgba(245, 200, 66, 0.35);
-    background: rgba(0, 0, 0, 0.55);
+    border: 2px solid rgba(245, 200, 66, .35);
+    background: rgba(0, 0, 0, .55);
     color: var(--gold);
     font-size: clamp(1.2rem, 3vw, 1.8rem);
     cursor: pointer;
-    transition: all 0.3s;
+    transition: all .3s;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -441,61 +557,13 @@ body {
     outline: none;
 }
 
-.nav-btn:hover,
-.nav-btn:active {
-    background: rgba(245, 200, 66, 0.18);
+.nav-btn:hover, .nav-btn:active {
+    background: rgba(245, 200, 66, .18);
     border-color: var(--gold);
-    box-shadow: 0 0 24px rgba(245, 200, 66, 0.4);
+    box-shadow: 0 0 24px rgba(245, 200, 66, .4);
 }
 
-.top-bar {
-    position: fixed;
-    top: clamp(10px, 3vw, 20px);
-    left: 0;
-    right: 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 clamp(10px, 4vw, 24px);
-    z-index: 200;
-    pointer-events: none;
-}
-
-.ctrl-btn {
-    pointer-events: all;
-    font-family: "Amiri", serif;
-    font-size: clamp(0.75rem, 2vw, 0.9rem);
-    color: rgba(245, 200, 66, 0.75);
-    border: 1px solid rgba(245, 200, 66, 0.2);
-    padding: 5px 14px;
-    border-radius: 20px;
-    background: rgba(0, 0, 0, 0.45);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    cursor: pointer;
-    transition: all 0.3s;
-    outline: none;
-    -webkit-appearance: none;
-}
-
-.ctrl-btn:hover {
-    color: var(--gold);
-    border-color: var(--gold);
-}
-
-.sound-btn {
-    font-size: clamp(1rem, 3vw, 1.3rem);
-    padding: 5px 10px;
-}
-
-/* Sound indicator */
-.sound-active {
-    color: var(--gold) !important;
-    border-color: var(--gold) !important;
-    box-shadow: 0 0 12px rgba(245, 200, 66, 0.4);
-}
-
-@media (max-width: 480px) {
+@media (max-width:480px) {
     .scene-content {
         padding-bottom: 80px;
     }
@@ -505,7 +573,7 @@ body {
     }
 }
 
-@media (max-height: 600px) {
+@media (max-height:600px) {
     .scene-content {
         padding-bottom: 65px;
     }

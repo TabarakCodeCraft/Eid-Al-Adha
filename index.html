@@ -12,7 +12,7 @@
       href="https://fonts.googleapis.com/css2?family=Scheherazade+New:wght@400;700&family=Amiri:ital,wght@0,400;0,700;1,400&family=Cinzel:wght@400;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <canvas id="bgCanvas"></canvas>
@@ -42,45 +42,30 @@
         &#8250;
       </button>
     </nav>
-    <div class="top-bar">
-      <button class="ctrl-btn" id="skipBtn" onclick="skipToEid()">
-        تخطي ↓
-      </button>
-      <button class="ctrl-btn sound-btn" id="soundBtn" onclick="toggleSound()">
-        🔇
-      </button>
-    </div>
 
-    <!-- SCENE 1: TAWAF -->
     <section class="scene active" id="scene1" data-scene="0">
       <canvas class="scene-canvas" id="tawafCanvas"></canvas>
-      <div class="scene-overlay"></div>
       <div class="scene-content">
-        <div class="scene-num">١</div>
         <h2 class="scene-title">الطواف حول الكعبة المشرفة</h2>
-        <p class="scene-sub">يطوف الحجاج سبعة أشواط تعظيماً لبيت الله الحرام</p>
+        <p class="scene-sub">يطوف الحجاج سبعة أشواط تعظيماً لبيت الله العتيق</p>
         <div class="calligraphy">لَبَّيْكَ اللَّهُمَّ لَبَّيْكَ</div>
       </div>
     </section>
 
-    <!-- SCENE 2: ARAFAT -->
     <section class="scene" id="scene2" data-scene="1">
       <canvas class="scene-canvas" id="arafatCanvas"></canvas>
       <div class="scene-overlay"></div>
       <div class="scene-content">
-        <div class="scene-num">٢</div>
         <h2 class="scene-title">وقفة عرفات العظيمة</h2>
         <p class="scene-sub">الحج عرفة · يقف الحجاج يدعون ربهم بجبل الرحمة</p>
         <div class="calligraphy">يَوْمُ عَرَفَةَ يَوْمُ الْحَجِّ الأَكْبَر</div>
       </div>
     </section>
 
-    <!-- SCENE 3: MUZDALIFAH -->
     <section class="scene" id="scene3" data-scene="2">
       <canvas class="scene-canvas" id="muzdalifaCanvas"></canvas>
       <div class="scene-overlay"></div>
       <div class="scene-content">
-        <div class="scene-num">٣</div>
         <h2 class="scene-title">المبيت في مزدلفة</h2>
         <p class="scene-sub">
           يبيت الحجاج في مزدلفة ويجمعون الحصى لرمي الجمرات
@@ -89,36 +74,32 @@
       </div>
     </section>
 
-    <!-- SCENE 4: JAMARAT -->
     <section class="scene" id="scene4" data-scene="3">
       <canvas class="scene-canvas" id="jamaratCanvas"></canvas>
       <div class="scene-overlay"></div>
       <div class="scene-content">
-        <div class="scene-num">٤</div>
         <h2 class="scene-title">رمي الجمرات</h2>
         <p class="scene-sub">
-          يرمي الحجاج الجمرات رمزاً لرجم الشيطان اقتداءً بإبراهيم عليه السلام
+          يرمي الحجاج الجمرات رمزاً لرجم الشيطان اقتداءً بسيدنا أبراهيم عليه
+          السلام
         </p>
-        <div class="calligraphy">رَغَمَ الشَّيْطَانُ وَخَزِيَ</div>
+        <div class="calligraphy">رَجمُ الشَّيْطَانُ وَخَزِيَ</div>
       </div>
     </section>
 
-    <!-- SCENE 5: EID -->
     <section class="scene" id="scene5" data-scene="4">
       <canvas class="scene-canvas" id="eidCanvas"></canvas>
       <div class="scene-overlay eid-overlay"></div>
       <div class="scene-content eid-content">
-        <div class="eid-badge">عيد مبارك</div>
         <h1 class="eid-title-ar">عيد أضحى مبارك</h1>
         <div class="eid-divider">
           <span>✦</span><span class="div-line"></span><span>☪</span
           ><span class="div-line"></span><span>✦</span>
         </div>
-        <h2 class="eid-title-en">Eid Al-Adha Mubarak</h2>
+        <h2 class="eid-title-en">Eid Al-Adha</h2>
         <p class="eid-sub-ar">تقبل الله منا ومنكم صالح الأعمال</p>
-        <p class="eid-sub-en">
-          May Allah accept your good deeds &amp; sacrifices
-        </p>
+
+  
       </div>
     </section>
 
